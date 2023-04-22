@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome  -->
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.2.1-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.2.1-web/css/all.css">
+    <!-- Font family  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Spotify</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="./grid.css">
+</head>
+<body>
+    <div class="wrap">
+                 <!-- Navigation menu -->
+        <div class="nav">
+            <div class="nav-header">
+                <div class="nav-header-logo">
+                    <i class="nav-header-logo__qr fa-brands fa-spotify"></i>
+                    <span>Spotify</span>
+                </div>
+                        <!-- Navigation menu -->
+                <div class="nav-header-menu">
+                        <div class="nav-menu-item">
+                            <i class="nav-menu-item-icon fa-solid fa-house"></i>
+                            <span>Home</span>
+                        </div>
+                        <div class="nav-menu-item">
+                            <i class="nav-menu-item-icon fa-solid fa-magnifying-glass"></i>
+                            <span>Search</span>
+                        </div>
+                        <div class="nav-menu-item">
+                            <i class="nav-menu-item-icon fa-solid fa-book-bookmark"></i>
+                            <span>Your library</span>
+                        </div>
+
+                </div>
+
+                <div class="nav-header-like">
+                    <div class="nav-like-item">
+                        <i class="nav-like-item-icon fa-solid fa-square-plus"></i>
+                        <span>Create Playlist</span>
+                    </div>
+                    <div class="nav-like-item">
+                        <i class="nav-like-item-icon fa-sharp fa-solid fa-podcast"></i>
+                        <span>Liked Songs</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-footer">
+                <div class="nav-footer-item">
+                    <span>My Playlist #2</span>
+                </div>
+                <div class="nav-footer-item">
+                    <span>Nhạc hay</span> 
+                </div>
+            </div>
+        </div>
+
+        <div class="wrap-sidebar">
+            <!-- Header sidebar right -->
+            <div class="sidebar-1">
+                <div class="sidebar-header">
+                    <div class="sidebar--page-navi">
+                        <div class="sidebar-navi-item">
+                            <i class="sidebar-navi-icon active fa-sharp fa-solid fa-chevron-left"></i>
+                        </div>
+                        <div class="sidebar-navi-item">
+                            <i class="sidebar-navi-icon fa-sharp fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    <div class="sidebar-user-info">
+                            <div class = "sidebar-user-img" style ="background-image: url('./assets/image/avt.webp');"></div>
+                            <p>Letienminh</p>
+                            <i class="sidebar-user-icon fa-sharp fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+
+                <div class="sidebar-header-menu">
+                    <ul class="sidebar-menu__list">
+                        <li class="sidebar-menu__item">
+                            All
+                        </li>
+                        <li class="sidebar-menu__item active">
+                            Songs
+                        </li>
+                        <li class="sidebar-menu__item">
+                            Playlists
+                        </li>
+                        <li class="sidebar-menu__item">
+                            Artists
+                        </li>
+                        <li class="sidebar-menu__item">
+                            Albums
+                        </li>
+                        <li class="sidebar-menu__item">
+                            Podcasts & Shows
+                        </li>
+                        <li class="sidebar-menu__item">
+                            Profiles
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="sidebar-2">
+
+                <main>
+                    <div class="list-album">
+                        <table id="table_songs" cellspacing="0" cellpadding="0">
+                            <thead>
+                                <tr>
+                                    <th style="width: 5%;">#</th>
+                                    <th style="width: 40%;">TITLE</th>
+                                    <th style="width: 50%;">ALBUM</th>
+                                    <th style="width: 5%;"><i class="fa-solid fa-clock"></i></th>
+                                </tr>
+                            </thead>
+                            
+                            <tbody id="tbody-table">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </main>
+                
+            </div>
+        </div>
+
+        <div class="play-music">
+            <div class="info-music">
+                <div class="info-img"></div>
+
+                <div class = "info-music-playlist-current">
+                    <a href="" class="name-music">Name music</a>
+                    <a href="" class="author-music">Name author</a>
+                </div>
+
+                <div class="info-music-like">
+                    <i class="info-music-like-icon fa-sharp fa-regular fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="adjust-music">
+                <div class="tool-music">
+                    <ul class="tool-music-list">
+                        <li class="tool-music-item tool-music-item--random" tooltip="Enable Shuffle" flow ="up">
+                            <i class="fa-solid fa-shuffle" ></i>
+                        </li>
+                        <li class="tool-music-item tool-music-item--prev" tooltip="Previous" flow ="up"><i class="fa-solid fa-backward-step"></i></li>
+                        <li class = "tool-music-item btn-toggle-play" flow ="up">
+                            <i  style="background-color: #fff;padding: 10px;border-radius: 50%; color: black;" class="tool-music-item-icon-play fa-solid fa-play"></i>
+                            <i  style="background-color: #fff;padding: 10px;border-radius: 50%; color: black;" class="tool-music-item-icon-pause fa-solid fa-pause"></i>
+                        </li>
+                        <li class="tool-music-item tool-music-item--next"  tooltip="Next" flow ="up"><i class="fa-solid fa-forward-step"></i></li>
+                        <li class="tool-music-item tool-music-item--repeat" tooltip="Enable repeat" flow ="up"><i class="fa-solid fa-repeat"></i></li>
+                    </ul>
+                    <audio src="" class="audio-music"></audio>
+                </div>
+                <div class="time-music">
+                    <span class="time-music-start">0:00</span>
+                    <input type="range" step="0.1" min="0" max="100" value = "0" class="line-music"></input>
+                    <span class="time-music-end">4:15</span>
+                </div>
+            </div>
+
+            <div class="adjust-volumn">
+                <i class="adjust-volumn-icon fa-sharp fa-solid fa-volume-high"></i>
+                
+                <input type="range" value="1" step="0.1" min="0" max="1" class="adjust-volumn-run"></input>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
